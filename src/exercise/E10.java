@@ -6,12 +6,13 @@ public class E10 {
 
 	public static void main(String[] args) {
 		// TODO 自动生成的方法存根
-		int sum = 0;
-		int h = 100;
+		double sum = 0;// 距离
+		double h = 100;// 高度
 		for (int i = 0; i < 10; i++) {
+			sum += h;
 			h = h / 2;
-			sum +=h;
 		}
-		System.out.print(sum);
+		System.out.println("经过了: "+sum+"米");
+		System.out.println("高度："+h+"米");
 	}
 }
