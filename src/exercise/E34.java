@@ -1,28 +1,39 @@
-//Ëæ»úÉú³É[1£¬ 20]Êı10000´Î£¬Ê¹ÓÃÁ½ÖÖ·½·¨ÊµÏÖ£¨java.lang.Math£¬java.util.Random£©£¬
-//²¢ÅĞ¶ÏÁ½ÖÖ·½·¨µÄĞ§ÂÊºÍ·Ö²¼¡£
 package exercise;
+
+import java.util.Random;
+
+/**
+ * Created by xdx on 2015/10/24.
+ */
+//éšæœºç”Ÿæˆ[1ï¼Œ 20]æ•°10000æ¬¡ï¼Œä½¿ç”¨ä¸¤ç§æ–¹æ³•å®ç°ï¼ˆjava.lang.Mathï¼Œjava.util.Randomï¼‰ï¼Œ
+//å¹¶åˆ¤æ–­ä¸¤ç§æ–¹æ³•çš„æ•ˆç‡å’Œåˆ†å¸ƒã€‚
 
 import java.util.Random;
 
 public class E34 {
 
-	public static void main(String[] args) {
-		// TODO ×Ô¶¯Éú³ÉµÄ·½·¨´æ¸ù
-           for(int i=0; i<1000; i++){
-             int a;
-        	 a=(int)(1+Math.random()*20);
+    public static void main(String[] args) {
+        // TODO è‡ªåŠ¨ç”Ÿæˆçš„æ–¹æ³•å­˜æ ¹
+        long s1=System.currentTimeMillis();
+        for(int i=0; i<10000; i++){
+            int a;
+            a=(int)(1+Math.random()*20);
 
-        	  System.out.print(a+"  ");
-           }
-           System.out.println();
-           System.out.println("-------------------------------------------------------------------------"+"ÁíÍâÒ»ÖÖ·½·¨"+"---------------------------------------------------------------------");
-           for (int j = 0; j < 1000; j++) {
+            System.out.print(a+" ");
+        }
+        System.out.println();
+        System.out.println("time:"+(System.currentTimeMillis()-s1));
+        System.out.println("-------------------------------------------------------------------------"+"å¦å¤–ä¸€ç§æ–¹æ³•"+"---------------------------------------------------------------------");
+        long s2=System.currentTimeMillis();
+        for (int j = 0; j < 10000; j++) {
+            Random r = new Random();
+            int b=r.nextInt(20)+1;
+            System.out.print(b+" ");
 
-               Random r = new Random();
-               int b=r.nextInt(20)+1;
-           System.out.print(b+" ");
-
-           }
-	}
+        }
+        System.out.println();
+        System.out.println("time:"+(System.currentTimeMillis()-s1));
+    }
 }
+
 

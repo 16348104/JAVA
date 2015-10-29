@@ -1,31 +1,30 @@
-package exercise;
+package exercise;//è¾“å…¥ä¸¤ä¸ªæ­£æ•´æ•°må’Œnï¼Œæ±‚å…¶æœ€å¤§å…¬çº¦æ•°å’Œæœ€å°å…¬å€æ•°ã€‚
 import java.util.Scanner;
-//ÊäÈëÁ½¸öÕıÕûÊımºÍn£¬ÇóÆä×î´ó¹«Ô¼ÊıºÍ×îĞ¡¹«±¶Êı¡£
 public class E6 {
-
-	public static void main(String[] args) {
-		int n, m,r,m1,n1;
-		Scanner scan=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸öÕûÊı(m>0):  ");
-		 m1=scan.nextInt();
-		 System.out.println("ÇëÊäÈëÒ»¸öÕûÊı(n>0):  ");
-		 n1=scan.nextInt();
-		 if(m1>n1)
-		 {
-			 m=m1;
-			 n=n1;
-		 }
-		 else
-		 {
-			 m=n1;
-			 n=m1;
-		 }
-		 do{
-			 r=m%n;
-			 m=n;
-			 n=r;
-		 }while(r!=0);
-			 System.out.println(m1+"ºÍ"+n1+"µÄ×î´ó¹«Ô¼Êı= "+m+",×îĞ¡¹«±¶Êı="+m1*n1/m);
-	}
+    public static void main(String[] args) {
+        int n, m,r,m1,n1;
+        Scanner scan=new Scanner(System.in);
+        System.out.println("è¯·è¾“å…¥æ•´æ•°(m>0):  ");
+        m1=scan.nextInt();
+        System.out.println("è¯·è¾“å…¥æ•´æ•°(n>0):  ");
+        n1=scan.nextInt();
+        if(m1>n1)
+        {
+            m=m1;
+            n=n1;
+        }
+        else
+        {
+            m=n1;
+            n=m1;
+        }
+        do{
+            r=m%n;
+            m=n;
+            n=r;
+        }while(r!=0);
+        System.out.println(m1+"å’Œ"+n1+"çš„æœ€å¤§å…¬çº¦æ•°= "+m+",æœ€å°å…¬å€æ•°="+m1*n1/m);
+    }
 
 }
+

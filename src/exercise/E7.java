@@ -1,36 +1,41 @@
-package exercise;
+package exercise; /**
+ * Created by xdx on 2015/10/23.
+ * //è¾“å…¥ä¸€è¡Œå­—ç¬¦ï¼Œåˆ†åˆ«ç»Ÿè®¡å‡ºå…¶ä¸­è‹±æ–‡å­—æ¯ã€ç©ºæ ¼ã€æ•°å­—å’Œå…¶å®ƒå­—ç¬¦çš„ä¸ªæ•°ã€‚
+ */
+
 import java.util.Scanner;
-//ÊäÈëÒ»ĞĞ×Ö·û£¬·Ö±ğÍ³¼Æ³öÆäÖĞÓ¢ÎÄ×ÖÄ¸¡¢¿Õ¸ñ¡¢Êı×ÖºÍÆäËü×Ö·ûµÄ¸öÊı¡£
+
 public class E7 {
 
-	public static void main(String[] args) {
-		System.out.println("ÇëÊäÈëÒ»ĞĞ×Ö·û: ");
-		Scanner scan=new Scanner(System.in);
-		String s=scan.nextLine();
-		int other=0;             //ÆäËü
-		int digit=0;              //Êı×Ö
-		int space=0;            //¿Õ¸ñ
-		int character=0;      //×ÖÄ¸
-		int chinese=0;            //ÖĞÎÄ
-		for(int i=0;i<s.length();i++)
-		{
-			if(s.charAt(i)>='0'&&s.charAt(i)<'9'){
-				 digit++;              //ÅĞ¶ÏÊı×Ö
-			}else if((s.charAt(i)>='a'&&s.charAt(i)<'z')||(s.charAt(i)>='A'&&s.charAt(i)<='Z')){
-				 character++;      //ÅĞ¶ÏÓ¢ÎÄ
-			}else if (s.charAt(i)>='\u4e00' && s.charAt(i)<='\u9fa5') {
-				chinese++;             //ÅĞ¶ÏÖĞÎÄ
-			}else if(s.charAt(i)==' '){
-				 space++;           //ÅĞ¶Ï¿Õ¸ñ
-			}else{
-					 other++;        //ÅĞ¶ÏÆäËü
-				}
-		}
-              System.out.println("Êı×Ö£º"+digit+'¸ö');
-              System.out.println("Ó¢ÎÄ£º"+character+'¸ö');
-              System.out.println("ÖĞÎÄ£º"+chinese+'¸ö');
-              System.out.println("¿Õ¸ñ£º"+ space+'¸ö');
-              System.out.println("ÆäËü£º"+ other+'¸ö');
-	}
+    public static void main(String[] args) {
+        System.out.println("è¯·è¾“å…¥ä¸€è¡Œå­—ç¬¦: ");
+        Scanner scan = new Scanner(System.in);
+        String s = scan.nextLine();
+        int other = 0;             //å…¶å®ƒ
+        int digit = 0;              //æ•°å­—
+        int space = 0;            //ç©ºæ ¼
+        int character = 0;      //å­—æ¯
+        int chinese = 0;            //ä¸­æ–‡
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) >= '0' && s.charAt(i) < '9') {
+                digit++;              //åˆ¤æ–­æ•°å­—
+            } else if ((s.charAt(i) >= 'a' && s.charAt(i) < 'z') || (s.charAt(i) >= 'A' && s.charAt(i) <= 'Z')) {
+                character++;      //åˆ¤æ–­è‹±æ–‡
+            } else if (s.charAt(i) >= '\u4e00' && s.charAt(i) <= '\u9fa5') {
+                chinese++;             //åˆ¤æ–­ä¸­æ–‡
+            } else if (s.charAt(i) == ' ') {
+                space++;           //åˆ¤æ–­ç©ºæ ¼
+            } else {
+                other++;        //åˆ¤æ–­å…¶å®ƒ
+            }
+        }
+        System.out.println("æ•°å­—ï¼š" + digit + 'ä¸ª');
+        System.out.println("è‹±æ–‡ï¼š" + character + 'ä¸ª');
+        System.out.println("ä¸­æ–‡ï¼š" + chinese + 'ä¸ª');
+        System.out.println("ç©ºæ ¼ï¼š" + space + 'ä¸ª');
+        System.out.println("å…¶å®ƒï¼š" + other + 'ä¸ª');
+    }
 
 }
+
+
