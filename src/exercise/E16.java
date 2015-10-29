@@ -5,4 +5,10 @@ package exercise;
  * 输出9*9口诀。
  */
 public class E16 {
+	for(){
+
+	}
+
+
+
 }
