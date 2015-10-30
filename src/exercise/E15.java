@@ -11,10 +11,12 @@ public class E15 {
 		int j = 0;
 		int k = 0;
 		int x = 0;
-		System.out.print("请输入三个数\n");
+		System.out.print("请输入第一个数\n");
 		Scanner input = new Scanner(System.in);
 		i = input.nextInt();
+		System.out.print("请输入第二个数\n");
 		j = input.nextInt();
+		System.out.print("请输入第三个数\n");
 		k = input.nextInt();
 		if (i > j) {
 			x = i;
