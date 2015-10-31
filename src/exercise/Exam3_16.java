@@ -39,7 +39,7 @@ class student extends people {
 }
 
 class Exam3_16 {
-	public static void main() {
+	public static void main(String[] args) {
 		people p = new graduate();
 	}
 }
