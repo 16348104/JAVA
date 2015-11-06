@@ -1,7 +1,8 @@
 package exercise;
 
 public class Father {
-	void m() {
-		System.out.print("hi.");
+	private int a;
+	 public void m() {
+		System.out.println("Father...");
 	}
 }
